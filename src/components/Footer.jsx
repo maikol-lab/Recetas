@@ -45,7 +45,7 @@ const Footer = () => {
         e.preventDefault();
         const button = e.currentTarget;
         const input = e.currentTarget.closest('.input-group').querySelector('input');
-        
+
         if (!input.value.trim()) {
             button.classList.add('animate__animated', 'animate__headShake');
             setTimeout(() => {
@@ -53,12 +53,12 @@ const Footer = () => {
             }, 1000);
             return;
         }
-        
+
         // Animación de éxito
         button.classList.add('animate__animated', 'animate__heartBeat');
         button.innerHTML = '<i class="fas fa-check me-2"></i>¡Enviado!';
         button.disabled = true;
-        
+
         setTimeout(() => {
             button.classList.remove('animate__animated', 'animate__heartBeat');
             button.innerHTML = 'Sign Up';
@@ -80,7 +80,7 @@ const Footer = () => {
     const animateLink = (e) => {
         const link = e.currentTarget;
         const icon = link.querySelector('i');
-        
+
         if (icon) {
             icon.classList.add('animate__animated', 'animate__flip');
             setTimeout(() => {
@@ -112,37 +112,37 @@ const Footer = () => {
                                     <p className="mb-0">+012 345 67890</p>
                                 </div>
                                 <div className="d-flex mt-4" ref={socialRef}>
-                                    <a 
+                                    <a
                                         className="btn btn-primary btn-square rounded-circle me-2 animate__animated animate__pulse animate__infinite animate__slow"
-                                        href="https://www.twitter.com/" 
-                                        target="_blank" 
+                                        href="https://www.twitter.com/"
+                                        target="_blank"
                                         rel="noopener noreferrer"
                                         onMouseEnter={animateSocialIcon}
                                     >
                                         <i className="fab fa-twitter" />
                                     </a>
-                                    <a 
+                                    <a
                                         className="btn btn-primary btn-square rounded-circle me-2 animate__animated animate__pulse animate__infinite animate__slow animate__delay-1s"
-                                        href="https://www.facebook.com/" 
-                                        target="_blank" 
+                                        href="https://www.facebook.com/"
+                                        target="_blank"
                                         rel="noopener noreferrer"
                                         onMouseEnter={animateSocialIcon}
                                     >
                                         <i className="fab fa-facebook-f" />
                                     </a>
-                                    <a 
+                                    <a
                                         className="btn btn-primary btn-square rounded-circle me-2 animate__animated animate__pulse animate__infinite animate__slow animate__delay-2s"
-                                        href="https://www.linkedin.com/" 
-                                        target="_blank" 
+                                        href="https://www.linkedin.com/"
+                                        target="_blank"
                                         rel="noopener noreferrer"
                                         onMouseEnter={animateSocialIcon}
                                     >
                                         <i className="fab fa-linkedin-in" />
                                     </a>
-                                    <a 
+                                    <a
                                         className="btn btn-primary btn-square rounded-circle me-2 animate__animated animate__pulse animate__infinite animate__slow animate__delay-3s"
-                                        href="https://www.instagram.com/" 
-                                        target="_blank" 
+                                        href="https://www.instagram.com/"
+                                        target="_blank"
                                         rel="noopener noreferrer"
                                         onMouseEnter={animateSocialIcon}
                                     >
@@ -153,43 +153,43 @@ const Footer = () => {
                             <div className="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5" ref={quickLinksRef}>
                                 <h3 className="text-light mb-4">Quick Links</h3>
                                 <div className="d-flex flex-column justify-content-start">
-                                    <a 
-                                        className="text-secondary mb-2" 
+                                    <a
+                                        className="text-secondary mb-2"
                                         href="#"
                                         onMouseEnter={animateLink}
                                     >
                                         <i className="bi bi-arrow-right text-primary me-2" />Home
                                     </a>
-                                    <a 
-                                        className="text-secondary mb-2" 
+                                    <a
+                                        className="text-secondary mb-2"
                                         href="#"
                                         onMouseEnter={animateLink}
                                     >
                                         <i className="bi bi-arrow-right text-primary me-2" />About Us
                                     </a>
-                                    <a 
-                                        className="text-secondary mb-2" 
+                                    <a
+                                        className="text-secondary mb-2"
                                         href="#"
                                         onMouseEnter={animateLink}
                                     >
                                         <i className="bi bi-arrow-right text-primary me-2" />Food Menu
                                     </a>
-                                    <a 
-                                        className="text-secondary mb-2" 
+                                    <a
+                                        className="text-secondary mb-2"
                                         href="#"
                                         onMouseEnter={animateLink}
                                     >
                                         <i className="bi bi-arrow-right text-primary me-2" />Our Chefs
                                     </a>
-                                    <a 
-                                        className="text-secondary mb-2" 
+                                    <a
+                                        className="text-secondary mb-2"
                                         href="#"
                                         onMouseEnter={animateLink}
                                     >
                                         <i className="bi bi-arrow-right text-primary me-2" />Latest Blog
                                     </a>
-                                    <a 
-                                        className="text-secondary" 
+                                    <a
+                                        className="text-secondary"
                                         href="#"
                                         onMouseEnter={animateLink}
                                     >
@@ -200,43 +200,43 @@ const Footer = () => {
                             <div className="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5 animate__animated animate__fadeInRight animate__delay-4s">
                                 <h3 className="text-light mb-4">More Links</h3>
                                 <div className="d-flex flex-column justify-content-start">
-                                    <a 
-                                        className="text-secondary mb-2" 
+                                    <a
+                                        className="text-secondary mb-2"
                                         href="#"
                                         onMouseEnter={animateLink}
                                     >
                                         <i className="bi bi-arrow-right text-primary me-2" />Home
                                     </a>
-                                    <a 
-                                        className="text-secondary mb-2" 
+                                    <a
+                                        className="text-secondary mb-2"
                                         href="#"
                                         onMouseEnter={animateLink}
                                     >
                                         <i className="bi bi-arrow-right text-primary me-2" />About Us
                                     </a>
-                                    <a 
-                                        className="text-secondary mb-2" 
+                                    <a
+                                        className="text-secondary mb-2"
                                         href="#"
                                         onMouseEnter={animateLink}
                                     >
                                         <i className="bi bi-arrow-right text-primary me-2" />Food Menu
                                     </a>
-                                    <a 
-                                        className="text-secondary mb-2" 
+                                    <a
+                                        className="text-secondary mb-2"
                                         href="#"
                                         onMouseEnter={animateLink}
                                     >
                                         <i className="bi bi-arrow-right text-primary me-2" />Our Chefs
                                     </a>
-                                    <a 
-                                        className="text-secondary mb-2" 
+                                    <a
+                                        className="text-secondary mb-2"
                                         href="#"
                                         onMouseEnter={animateLink}
                                     >
                                         <i className="bi bi-arrow-right text-primary me-2" />Latest Blog
                                     </a>
-                                    <a 
-                                        className="text-secondary" 
+                                    <a
+                                        className="text-secondary"
                                         href="#"
                                         onMouseEnter={animateLink}
                                     >
@@ -247,8 +247,8 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6">
-                        <div 
-                            className="d-flex flex-column align-items-center justify-content-center text-center h-100 p-5" 
+                        <div
+                            className="d-flex flex-column align-items-center justify-content-center text-center h-100 p-5"
                             style={{ background: '#111111' }}
                             ref={newsletterRef}
                         >
@@ -261,13 +261,13 @@ const Footer = () => {
                             </p>
                             <form action="#">
                                 <div className="input-group animate__animated animate__zoomIn animate__delay-3s">
-                                    <input 
-                                        type="email" 
-                                        className="form-control border-white p-3 animate__animated animate__pulse animate__infinite animate__slow" 
-                                        placeholder="Tu Email" 
+                                    <input
+                                        type="email"
+                                        className="form-control border-white p-3 animate__animated animate__pulse animate__infinite animate__slow"
+                                        placeholder="Tu Email"
                                         required
                                     />
-                                    <button 
+                                    <button
                                         className="btn btn-primary animate__animated animate__pulse"
                                         type="submit"
                                         onClick={handleSubscribe}
@@ -289,7 +289,7 @@ const Footer = () => {
                     <div className="col-lg-8">
                         <div className="py-lg-4 text-center">
                             <p className="text-secondary mb-0 animate__animated animate__fadeIn animate__delay-5s">
-                                © <a className="text-light fw-bold animate__animated animate__flash animate__infinite animate__slower" href="#">Chefer</a>. 
+                                © <a className="text-light fw-bold animate__animated animate__flash animate__infinite animate__slower" href="#">Chefer</a>.
                                 Todos los Derechos Reservados.
                             </p>
                         </div>
@@ -303,8 +303,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            
-            
+
+
         </div>
     );
 };

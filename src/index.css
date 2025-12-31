@@ -11,7 +11,7 @@
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
 }
 
 .card img {
@@ -28,7 +28,7 @@
 }
 
 .bg-gradient-overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .bg-gradient-light {
@@ -65,9 +65,17 @@
 
 /* Animaciones personalizadas */
 @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .bg-gradient-success {
@@ -255,8 +263,13 @@
 }
 
 @keyframes float {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Efecto para el botón */
@@ -272,7 +285,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: left 0.7s;
     z-index: -1;
 }
@@ -283,7 +296,7 @@
 
 /* Animación para los íconos de cócteles */
 .cocktail-icon {
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
     transition: transform 0.3s ease;
 }
 
@@ -331,7 +344,7 @@
 
 .badge:hover {
     transform: scale(1.2);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Efecto para botones de éxito */
@@ -349,7 +362,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: left 0.7s;
 }
 
@@ -360,7 +373,7 @@
 /* Estilos para mejorar el formulario */
 .form-control {
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .form-control:focus {
@@ -376,7 +389,7 @@
 
 .bg-light.rounded:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     border-color: #667eea;
 }
 
@@ -395,7 +408,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: left 0.7s;
 }
 
@@ -493,24 +506,137 @@ iframe:hover {
 @media (max-width: 991.98px) {
     .dropdown-item {
         padding: 0.75rem 1.5rem !important;
-        color: rgba(255,255,255,0.8) !important;
+        color: rgba(255, 255, 255, 0.8) !important;
         border-left: none !important;
-        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
-    
+
     .dropdown-item:hover {
-        background: rgba(255,255,255,0.1) !important;
+        background: rgba(255, 255, 255, 0.1) !important;
         color: white !important;
         transform: none !important;
         padding-left: 2rem !important;
     }
-    
+
     .dropdown-item i {
         color: inherit !important;
     }
-    
+
     .text-truncate {
         max-width: 200px !important;
     }
 }
 
+/* ========== CORRECCIONES PARA MODALES ========== */
+
+/* Forzar blur en elementos de modales cerrados */
+.modal[aria-hidden="true"] .modal-close-btn:focus,
+.modal[aria-hidden="true"] .btn-close:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Prevenir que elementos mantengan foco después de cerrar */
+.modal.fade:not(.show) * {
+    pointer-events: none;
+}
+
+/* Estilos específicos para botones que cierran modales */
+.btn-close-fix {
+    position: relative;
+    z-index: 1000;
+}
+
+.btn-close-fix:focus {
+    outline: 2px solid transparent !important;
+    box-shadow: 0 0 0 0 transparent !important;
+}
+
+/* Asegurar que el backdrop se remueva correctamente */
+.modal-backdrop.fade:not(.show) {
+    display: none;
+}
+
+/* Corrección para scroll cuando hay modal */
+body.modal-open {
+    overflow: hidden;
+    padding-right: 0 !important;
+}
+
+/* Reset de estilos para botones en modales */
+.modal .btn:active,
+.modal .btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Clase especial para botones que cierran modales */
+.modal-close-btn {
+    transition: all 0.2s ease;
+}
+
+.modal-close-btn:active {
+    transform: scale(0.98);
+}
+
+.modal-close-btn:focus {
+    outline: 2px solid #0d6efd !important;
+    outline-offset: 2px;
+}
+
+/* Asegurar que los modales cerrados no interfieran */
+.modal.fade {
+    transition: opacity 0.15s linear;
+}
+
+/* Prevenir que elementos mantengan estado activo */
+.modal *:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Corrección específica para botón de compra */
+.btn-success:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+
+/* Agrega estos estilos CSS para mejoras visuales */
+
+` .hover-effect:hover {
+    animation: animate__rubberBand 1s !important;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+    animation: animate__pulse 0.5s !important;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    animation: animate__bounceIn 0.5s !important;
+    background-color: var(--bs-primary);
+    color: white !important;
+    padding-left: 20px !important;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-warning:hover .fa-shopping-cart {
+    animation: animate__tada 1s !important;
+}
+
+/* Estilo para prevenir problemas de foco - SOLUCIÓN SIMPLE */
+.modal {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.modal *:focus {
+    outline: 2px solid #0d6efd;
+    outline-offset: 2px;
+}
+
+.btn-close:focus {
+    box-shadow: none !important;
+}

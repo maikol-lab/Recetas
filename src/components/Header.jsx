@@ -31,9 +31,9 @@ const Header = () => {
         <div className="container-fluid bg-dark px-0">
             <div className="row gx-0">
                 <div className="col-lg-3 bg-primary d-none d-lg-block">
-                    <a href="index.html" className="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <Link to="/" className="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                         <h1 className="m-0 display-4 text-white text-uppercase animate__animated animate__flipInX">Chefer</h1>
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="col-lg-9">
@@ -47,8 +47,8 @@ const Header = () => {
                                 placeholder="Search"
                                 aria-label="Search"
                             />
-                            <button 
-                                className="btn btn-outline-success animate__animated animate__fadeIn animate__delay-1s" 
+                            <button
+                                className="btn btn-outline-success animate__animated animate__fadeIn animate__delay-1s"
                                 type="submit"
                             >
                                 Search
@@ -87,9 +87,9 @@ const Header = () => {
                     </div>
 
                     <nav className="navbar navbar-expand-lg navbar-dark p-3 p-lg-0 px-lg-5" style={{ background: '#111111' }}>
-                        <a href="index.html" className="navbar-brand d-block d-lg-none animate__animated animate__flipInX">
+                        <Link to="/" className="navbar-brand d-block d-lg-none animate__animated animate__flipInX">
                             <h1 className="m-0 display-4 text-primary text-uppercase">Chefer</h1>
-                        </a>
+                        </Link>
 
                         {/* Carrito para móvil */}
                         <div className="d-block d-lg-none me-3">
@@ -108,10 +108,10 @@ const Header = () => {
                             </button>
                         </div>
 
-                        <button 
-                            type="button" 
-                            className="navbar-toggler animate__animated animate__pulse" 
-                            data-bs-toggle="collapse" 
+                        <button
+                            type="button"
+                            className="navbar-toggler animate__animated animate__pulse"
+                            data-bs-toggle="collapse"
                             data-bs-target="#navbarCollapse"
                         >
                             <span className="navbar-toggler-icon" />
@@ -119,20 +119,20 @@ const Header = () => {
 
                         <div className="collapse navbar-collapse animate__animated animate__fadeIn" id="navbarCollapse">
                             <div className="navbar-nav me-auto mb-2 mb-lg-0">
-                                <Link 
-                                    to={'/inicio'} 
+                                <Link
+                                    to={'/inicio'}
                                     className="nav-link active animate__animated animate__fadeInDown animate__delay-1s"
                                 >
                                     INICIO
                                 </Link>
-                                <Link 
-                                    to={"/heroinicio"} 
+                                <Link
+                                    to={"/heroinicio"}
                                     className="nav-link animate__animated animate__fadeInDown animate__delay-2s"
                                 >
                                     Ver
                                 </Link>
-                                <Link 
-                                    to={'/recetas'} 
+                                <Link
+                                    to={'/recetas'}
                                     className="nav-link animate__animated animate__fadeInDown animate__delay-3s"
                                 >
                                     Recetas
@@ -140,13 +140,12 @@ const Header = () => {
 
                                 {/* Licores en dropdown */}
                                 <div className="nav-item dropdown animate__animated animate__fadeInDown animate__delay-4s">
-                                    <a 
-                                        href="#" 
-                                        className="nav-link dropdown-toggle animate__animated animate__headShake" 
+                                    <button
+                                        className="nav-link dropdown-toggle animate__animated animate__headShake border-0 bg-transparent text-white"
                                         data-bs-toggle="dropdown"
                                     >
                                         Licores
-                                    </a>
+                                    </button>
                                     <div className="dropdown-menu animate__animated animate__zoomIn">
                                         <Link to={"/coctelesreactetapa1y2/licor/Brandy/1"} className="dropdown-item animate__animated animate__fadeInLeft">Brandy</Link>
                                         <Link to={"/coctelesreactetapa1y2/licor/Gin/1"} className="dropdown-item animate__animated animate__fadeInLeft animate__delay-1s">Gin</Link>
@@ -159,13 +158,12 @@ const Header = () => {
 
                                 {/* Tipo dropdown */}
                                 <div className="nav-item dropdown animate__animated animate__fadeInDown animate__delay-5s">
-                                    <a 
-                                        href="#" 
-                                        className="nav-link dropdown-toggle animate__animated animate__headShake" 
+                                    <button
+                                        className="nav-link dropdown-toggle animate__animated animate__headShake border-0 bg-transparent text-white"
                                         data-bs-toggle="dropdown"
                                     >
                                         Tipo
-                                    </a>
+                                    </button>
                                     <div className="dropdown-menu animate__animated animate__zoomIn">
                                         <FiltroTipoCocteles />
                                     </div>
@@ -173,20 +171,19 @@ const Header = () => {
 
                                 {/* Categorías dropdown */}
                                 <div className="nav-item dropdown animate__animated animate__fadeInDown animate__delay-6s">
-                                    <a 
-                                        href="#" 
-                                        className="nav-link dropdown-toggle animate__animated animate__headShake" 
+                                    <button
+                                        className="nav-link dropdown-toggle animate__animated animate__headShake border-0 bg-transparent text-white"
                                         data-bs-toggle="dropdown"
                                     >
                                         Categorías
-                                    </a>
+                                    </button>
                                     <div className="dropdown-menu animate__animated animate__zoomIn">
                                         <FiltroCategoriaCocteles />
                                     </div>
                                 </div>
 
-                                <Link 
-                                    to={'/contact'} 
+                                <Link
+                                    to={'/contact'}
                                     className="nav-link animate__animated animate__fadeInDown animate__delay-7s"
                                 >
                                     Contacto
@@ -212,7 +209,7 @@ const Header = () => {
                                 </button>
 
                                 {/* Redes sociales */}
-                                <a 
+                                <a
                                     className="btn btn-outline-secondary btn-square rounded-circle mx-1 animate__animated animate__bounceIn animate__delay-1s hover-effect"
                                     href="https://www.facebook.com/"
                                     target="_blank"
@@ -220,7 +217,7 @@ const Header = () => {
                                 >
                                     <i className="fab fa-facebook-f" />
                                 </a>
-                                <a 
+                                <a
                                     className="btn btn-outline-secondary btn-square rounded-circle mx-1 animate__animated animate__bounceIn animate__delay-2s hover-effect"
                                     href="https://www.twitter.com/"
                                     target="_blank"
@@ -228,7 +225,7 @@ const Header = () => {
                                 >
                                     <i className="fab fa-twitter" />
                                 </a>
-                                <a 
+                                <a
                                     className="btn btn-outline-secondary btn-square rounded-circle mx-1 animate__animated animate__bounceIn animate__delay-3s hover-effect"
                                     href="https://www.linkedin.com/"
                                     target="_blank"
@@ -242,37 +239,27 @@ const Header = () => {
                 </div>
             </div>
 
-            {/* Modal del Carrito */}
+            {/* Modal del Carrito - SIMPLIFICADO */}
             <div className="modal fade" id="carritoModal" tabIndex={-1} aria-labelledby="carritoModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-xl modal-dialog-scrollable">
-                    <div className="modal-content animate__animated animate__zoomIn">
+                    <div className="modal-content">
                         <div className="modal-header bg-primary text-white">
                             <h5 className="modal-title" id="carritoModalLabel">
-                                <i className="fas fa-shopping-cart me-2 animate__animated animate__tada animate__infinite"></i>
+                                <i className="fas fa-shopping-cart me-2"></i>
                                 Carrito de Compras
-                                <span className="badge bg-warning text-dark ms-2 animate__animated animate__bounce">
+                                <span className="badge bg-warning text-dark ms-2">
                                     {cart.length} {cart.length === 1 ? 'producto' : 'productos'}
                                 </span>
                             </h5>
-                            <button 
-                                type="button" 
-                                className="btn-close btn-close-white animate__animated animate__rotateOut" 
-                                data-bs-dismiss="modal" 
+                            <button
+                                type="button"
+                                className="btn-close btn-close-white"
+                                data-bs-dismiss="modal"
                                 aria-label="Close"
                             ></button>
                         </div>
                         <div className="modal-body p-0">
                             <VerCarrito />
-                        </div>
-                        <div className="modal-footer">
-                            <button 
-                                type="button" 
-                                className="btn btn-secondary animate__animated animate__fadeInLeft" 
-                                data-bs-dismiss="modal"
-                            >
-                                <i className="fas fa-arrow-left me-2"></i>
-                                Seguir Comprando
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -281,13 +268,13 @@ const Header = () => {
             {/* Modal de búsqueda */}
             <div className="modal fade" id="searchModal" tabIndex={-1} aria-labelledby="searchModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
-                    <div className="modal-content animate__animated animate__slideInDown">
+                    <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title" id="searchModalLabel">Buscar recetas o cócteles</h5>
-                            <button 
-                                type="button" 
-                                className="btn-close animate__animated animate__flipOutX" 
-                                data-bs-dismiss="modal" 
+                            <button
+                                type="button"
+                                className="btn-close"
+                                data-bs-dismiss="modal"
                                 aria-label="Close"
                             ></button>
                         </div>
@@ -296,17 +283,17 @@ const Header = () => {
                                 <div className="input-group">
                                     <input
                                         type="text"
-                                        className="form-control animate__animated animate__fadeInLeft"
+                                        className="form-control"
                                         placeholder="Buscar recetas o cócteles..."
                                         value={txtbuscar}
                                         onChange={menejoTxt}
                                     />
-                                    <button 
-                                        className="btn btn-primary animate__animated animate__fadeInRight animate__delay-1s" 
-                                        type="submit" 
+                                    <button
+                                        className="btn btn-primary"
+                                        type="submit"
                                         data-bs-dismiss="modal"
                                     >
-                                        <i className="fas fa-search animate__animated animate__swing"></i>
+                                        <i className="fas fa-search"></i>
                                     </button>
                                 </div>
                                 <div className="mt-3">
@@ -321,32 +308,7 @@ const Header = () => {
                 </div>
             </div>
 
-            {/* Agrega estos estilos CSS para mejoras visuales */}
-            <style>{`
-                .hover-effect:hover {
-                    animation: animate__rubberBand 1s !important;
-                    transform: scale(1.1);
-                    transition: transform 0.3s ease;
-                }
-                
-                .nav-link:hover {
-                    animation: animate__pulse 0.5s !important;
-                    transform: translateY(-2px);
-                    transition: all 0.3s ease;
-                }
-                
-                .dropdown-item:hover {
-                    animation: animate__bounceIn 0.5s !important;
-                    background-color: var(--bs-primary);
-                    color: white !important;
-                    padding-left: 20px !important;
-                    transition: all 0.3s ease;
-                }
-                
-                .btn-outline-warning:hover .fa-shopping-cart {
-                    animation: animate__tada 1s !important;
-                }
-            `}</style>
+
         </div>
     );
 };

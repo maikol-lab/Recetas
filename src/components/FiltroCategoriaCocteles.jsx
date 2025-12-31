@@ -14,7 +14,7 @@ const FiltroCategoriaCocteles = () => {
             const data = await response.json();
             if (data.drinks) {
                 // Ordenar alfabéticamente
-                const datosOrdenados = data.drinks.sort((a, b) => 
+                const datosOrdenados = data.drinks.sort((a, b) =>
                     a.strCategory.localeCompare(b.strCategory)
                 );
                 setDatos(datosOrdenados);
@@ -34,7 +34,7 @@ const FiltroCategoriaCocteles = () => {
     const codificarCategoriaURL = (categoria) => {
         // Codificar para URL (mantiene las barras como %2F)
         const categoriaCodificada = encodeURIComponent(categoria);
-        
+
         // Tu estructura original de ruta
         return `/coctelesreactetapa1y2/licor/${categoriaCodificada}/3`;
     };
@@ -66,10 +66,10 @@ const FiltroCategoriaCocteles = () => {
         <>
             {datos.map((item, index) => {
                 const categoriaNombre = item.strCategory;
-                
+
                 // Para TODAS las categorías, incluyendo problemáticas
                 return (
-                    <Link 
+                    <Link
                         to={codificarCategoriaURL(categoriaNombre)}
                         key={index}
                         className="dropdown-item"
@@ -82,12 +82,12 @@ const FiltroCategoriaCocteles = () => {
                         }}
                     >
                         {/* Mostrar ícono para categorías con caracteres especiales */}
-                        
+
                         {categoriaNombre}
                     </Link>
                 );
             })}
-            
+
         </>
     );
 };

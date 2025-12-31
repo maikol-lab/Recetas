@@ -9,7 +9,7 @@ const Detalle = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const id = params.id;
-    
+
     const getDatos = async () => {
         let URI = API + id;
         try {
@@ -42,7 +42,7 @@ const Detalle = () => {
             <div className="container-fluid bg-gradient-custom py-5 min-vh-100 animate__animated animate__fadeIn">
                 <div className="container">
                     <h3 className="text-center py-4 fw-bold text-primary animate__animated animate__fadeInDown">Detalle del Cóctel</h3>
-                    
+
                     <div className="row justify-content-center">
                         <div className="col-lg-10">
                             <div className="card border-0 shadow-lg overflow-hidden animate__animated animate__fadeInUp">
@@ -50,9 +50,9 @@ const Detalle = () => {
                                     {/* Columna de la imagen */}
                                     <div className="col-md-5">
                                         <div className="position-relative">
-                                            <img 
-                                                src={datos.strDrinkThumb} 
-                                                alt={datos.strDrink} 
+                                            <img
+                                                src={datos.strDrinkThumb}
+                                                alt={datos.strDrink ? datos.strDrink.toString() : "Cóctel"}
                                                 className="img-fluid h-100 w-100 animate__animated animate__fadeInLeft"
                                                 style={{
                                                     objectFit: 'cover',
@@ -66,12 +66,12 @@ const Detalle = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     {/* Columna de la información */}
                                     <div className="col-md-7">
                                         <div className="card-body p-4 p-md-5 animate__animated animate__fadeInRight">
                                             <h2 className="fw-bold text-primary mb-3 animate__animated animate__fadeIn animate__delay-1s">{datos.strDrink}</h2>
-                                            
+
                                             <div className="row mb-4">
                                                 <div className="col-md-6 mb-3 animate__animated animate__fadeIn animate__delay-1s">
                                                     <div className="d-flex align-items-center">
@@ -98,7 +98,7 @@ const Detalle = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                             {/* Ingredientes */}
                                             <div className="mb-4">
                                                 <h5 className="fw-bold text-secondary mb-3 animate__animated animate__fadeIn animate__delay-2s">
@@ -122,7 +122,7 @@ const Detalle = () => {
                                                     ))}
                                                 </div>
                                             </div>
-                                            
+
                                             {/* Instrucciones */}
                                             <div className="mt-4 pt-3 border-top animate__animated animate__fadeIn animate__delay-3s">
                                                 <h5 className="fw-bold text-secondary mb-3">
@@ -135,10 +135,10 @@ const Detalle = () => {
                                                     </p>
                                                 </div>
                                             </div>
-                                            
+
                                             {/* Botón de volver inteligente */}
                                             <div className="mt-4 pt-3 border-top animate__animated animate__fadeIn animate__delay-3s">
-                                                <button 
+                                                <button
                                                     onClick={handleVolver}
                                                     className="btn btn-primary px-4 animate__animated animate__pulse animate__delay-4s"
                                                 >

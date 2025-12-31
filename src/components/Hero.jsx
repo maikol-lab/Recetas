@@ -11,15 +11,15 @@ const Hero = () => {
                     <div className='col-lg-8 mb-4 mb-lg-0'>
                         <div className='card border-0 shadow-lg p-4 animate__animated animate__slideInLeft'>
                             <h5 className='fw-semibold mb-3 animate__animated animate__fadeIn animate__delay-1s'>
-                                <span className='text-primary animate__animated animate__pulse animate__infinite animate__slower'>El API de TheCocktailDB</span> es una fuente de datos 
-                                abierta y en línea que proporciona información sobre bebidas y cócteles de todo el mundo. 
-                                Es una API simple en formato JSON que ofrece una base de datos en línea de recetas de cócteles. 
-                                Puedes acceder a una amplia variedad de información, como el nombre de las bebidas, los 
+                                <span className='text-primary animate__animated animate__pulse animate__infinite animate__slower'>El API de TheCocktailDB</span> es una fuente de datos
+                                abierta y en línea que proporciona información sobre bebidas y cócteles de todo el mundo.
+                                Es una API simple en formato JSON que ofrece una base de datos en línea de recetas de cócteles.
+                                Puedes acceder a una amplia variedad de información, como el nombre de las bebidas, los
                                 ingredientes, las imágenes y más.
                             </h5>
                             <h5 className='mb-4 animate__animated animate__fadeIn animate__delay-2s'>
-                                El API de TheCocktailDB es utilizado por desarrolladores para crear aplicaciones y sitios 
-                                web relacionados con cócteles. También es utilizado por universidades para enseñar diseño 
+                                El API de TheCocktailDB es utilizado por desarrolladores para crear aplicaciones y sitios
+                                web relacionados con cócteles. También es utilizado por universidades para enseñar diseño
                                 web y programación debido a su API fácil de usar y su contenido interesante.
                             </h5>
                             <div className='mt-4 animate__animated animate__fadeIn animate__delay-3s'>
@@ -63,15 +63,15 @@ const Hero = () => {
                     </div>
                     <div className='col-lg-4'>
                         <div className='card border-0 shadow-lg overflow-hidden animate__animated animate__slideInRight animate__delay-1s'>
-                            <img 
-                                src={hero1} 
-                                alt="Cócteles y bebidas" 
-                                className='img-fluid rounded-3 animate__animated animate__zoomIn animate__delay-2s' 
-                                style={{ 
+                            <img
+                                src={hero1}
+                                alt="Cócteles y bebidas"
+                                className='img-fluid rounded-3 animate__animated animate__zoomIn animate__delay-2s'
+                                style={{
                                     height: '100%',
                                     objectFit: 'cover',
                                     minHeight: '500px'
-                                }} 
+                                }}
                             />
                             <div className='card-img-overlay d-flex flex-column justify-content-end bg-gradient-overlay animate__animated animate__fadeInUp animate__delay-3s'>
                                 <div className='p-3'>

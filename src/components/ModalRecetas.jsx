@@ -2,7 +2,7 @@ const ModalRecetas = ({ item, precio }) => {
     // Función auxiliar para clases de dificultad
     const getDifficultyClass = (difficulty) => {
         if (!difficulty) return 'bg-secondary';
-        switch(difficulty.toLowerCase()) {
+        switch (difficulty.toLowerCase()) {
             case 'fácil':
             case 'easy':
                 return 'bg-success';
@@ -18,11 +18,11 @@ const ModalRecetas = ({ item, precio }) => {
     }
 
     return (
-        <div className="modal fade animate__animated animate__zoomIn" 
-             id={`modal-${item.id}`} 
-             tabIndex="-1" 
-             aria-hidden="true"
-             data-bs-backdrop="static">
+        <div className="modal fade animate__animated animate__zoomIn"
+            id={`modal-${item.id}`}
+            tabIndex="-1"
+            aria-hidden="true"
+            data-bs-backdrop="static">
             <div className="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                 <div className="modal-content border-0 shadow-lg animate__animated animate__slideInUp">
                     <div className="modal-header bg-gradient-success text-white py-3 animate__animated animate__fadeInDown">
@@ -68,12 +68,12 @@ const ModalRecetas = ({ item, precio }) => {
                                         <div className="position-absolute bottom-0 start-0 end-0 bg-gradient-overlay p-3 animate__animated animate__fadeInUp">
                                             <div className="d-flex justify-content-center gap-3">
                                                 <span className="badge bg-primary px-3 py-2 animate__animated animate__bounceIn"
-                                                      style={{ animationDelay: '0.2s' }}>
+                                                    style={{ animationDelay: '0.2s' }}>
                                                     <i className="fas fa-clock me-1 animate__animated animate__rotateIn"></i>
                                                     {item.prepTimeMinutes || 10} min prep
                                                 </span>
                                                 <span className="badge bg-warning text-dark px-3 py-2 animate__animated animate__bounceIn"
-                                                      style={{ animationDelay: '0.3s' }}>
+                                                    style={{ animationDelay: '0.3s' }}>
                                                     <i className="fas fa-fire me-1 animate__animated animate__heartBeat"></i>
                                                     {item.cookTimeMinutes} min cocción
                                                 </span>
@@ -119,8 +119,8 @@ const ModalRecetas = ({ item, precio }) => {
                                                 <div className="col-6">
                                                     <small className="text-muted d-block">Nivel</small>
                                                     <span className="fw-bold text-success">
-                                                        {item.difficulty === 'Easy' ? '★☆☆' : 
-                                                         item.difficulty === 'Medium' ? '★★☆' : '★★★'}
+                                                        {item.difficulty === 'Easy' ? '★☆☆' :
+                                                            item.difficulty === 'Medium' ? '★★☆' : '★★★'}
                                                     </span>
                                                 </div>
                                             </div>
@@ -148,9 +148,9 @@ const ModalRecetas = ({ item, precio }) => {
                                                 {item.ingredients?.map((ingrediente, index) => (
                                                     <div key={index} className="col-md-6">
                                                         <div className="d-flex align-items-center p-2 bg-white rounded border animate__animated animate__fadeInLeft"
-                                                             style={{ animationDelay: `${index * 0.05}s` }}
-                                                             onMouseEnter={(e) => e.currentTarget.classList.add('animate__animated', 'animate__headShake')}
-                                                             onMouseLeave={(e) => e.currentTarget.classList.remove('animate__animated', 'animate__headShake')}>
+                                                            style={{ animationDelay: `${index * 0.05}s` }}
+                                                            onMouseEnter={(e) => e.currentTarget.classList.add('animate__animated', 'animate__headShake')}
+                                                            onMouseLeave={(e) => e.currentTarget.classList.remove('animate__animated', 'animate__headShake')}>
                                                             <span className="badge bg-success-subtle text-success me-2 animate__animated animate__flipInX">
                                                                 {index + 1}
                                                             </span>
@@ -178,14 +178,14 @@ const ModalRecetas = ({ item, precio }) => {
                                         <div className="card-body p-3">
                                             <div className="step-list">
                                                 {item.instructions?.map((paso, index) => (
-                                                    <div key={index} 
-                                                         className="mb-3 pb-3 border-bottom animate__animated animate__fadeInUp"
-                                                         style={{ animationDelay: `${index * 0.1}s` }}>
+                                                    <div key={index}
+                                                        className="mb-3 pb-3 border-bottom animate__animated animate__fadeInUp"
+                                                        style={{ animationDelay: `${index * 0.1}s` }}>
                                                         <div className="d-flex">
                                                             <div className="step-number me-3">
                                                                 <span className="badge bg-success rounded-circle d-flex align-items-center justify-content-center animate__animated animate__bounceIn"
-                                                                    style={{ 
-                                                                        width: '30px', 
+                                                                    style={{
+                                                                        width: '30px',
                                                                         height: '30px',
                                                                         animationDelay: `${index * 0.2}s`
                                                                     }}>
