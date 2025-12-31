@@ -1,0 +1,516 @@
+.app {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Estilos para CardRecetas */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
+}
+
+.card img {
+    transition: transform 0.5s ease;
+}
+
+/* Estilos para ModalRecetas */
+.modal-content {
+    animation-duration: 0.5s !important;
+}
+
+.bg-gradient-success {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+}
+
+.bg-gradient-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+}
+
+.bg-gradient-light {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.sticky-sidebar {
+    position: sticky;
+    top: 20px;
+}
+
+.step-list .border-bottom:last-child {
+    border-bottom: none !important;
+}
+
+/* Scrollbar personalizado */
+.content-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.content-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.content-scroll::-webkit-scrollbar-thumb {
+    background: #28a745;
+    border-radius: 10px;
+}
+
+.content-scroll::-webkit-scrollbar-thumb:hover {
+    background: #218838;
+}
+
+/* Animaciones personalizadas */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.bg-gradient-success {
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+}
+
+/* Efecto hover para ingredientes */
+.ingredient-item:hover {
+    background: linear-gradient(135deg, #f8fff9 0%, #e8f5e9 100%) !important;
+    border-color: #28a745 !important;
+}
+
+/* Estilos para el componente Hero */
+.bg-gradient-custom {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.list-group-item {
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
+}
+
+.list-group-item:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+    border-radius: 8px;
+}
+
+.badge {
+    padding: 6px 10px;
+    font-weight: 500;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-gradient-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .bg-gradient-overlay {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bg-gradient-custom {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Estilos para el componente Detalle */
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+/* Si quieres usar la imagen de fondo específica */
+.bg-cocktail-detalle {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../assets/bg_4.jpg') center/cover no-repeat;
+    color: white;
+}
+
+/* O si prefieres mantener el gradiente del Hero */
+.bg-gradient-custom {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Estilos para las tarjetas */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Mejora para los badges */
+.badge {
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+/* Efecto hover para los ingredientes */
+.bg-light:hover {
+    background-color: rgba(13, 110, 253, 0.1) !important;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem !important;
+    }
+
+    .row.g-0>.col-md-5 {
+        height: 300px;
+    }
+
+    img.img-fluid {
+        height: 100% !important;
+        min-height: auto !important;
+    }
+}
+
+/* Solución definitiva para dropdowns */
+.navbar {
+    position: relative;
+    z-index: 1030 !important;
+}
+
+.navbar-collapse {
+    position: relative;
+    z-index: 1030 !important;
+}
+
+.nav-item.dropdown {
+    position: relative !important;
+    z-index: 1050 !important;
+}
+
+.dropdown-menu {
+    z-index: 1051 !important;
+    position: absolute !important;
+}
+
+.dropdown-item {
+    position: relative !important;
+    z-index: 1052 !important;
+}
+
+/* Asegurar que animaciones no afecten z-index */
+.animate__animated {
+    animation-fill-mode: both !important;
+    z-index: inherit !important;
+}
+
+/* Prevenir que elementos queden detrás */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos adicionales para Error404 */
+.min-vh-100 {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Efecto de fondo animado */
+.error-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.error-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.05) 70%, transparent 100%);
+    animation: float 20s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Efecto para el botón */
+.btn-primary {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.7s;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Animación para los íconos de cócteles */
+.cocktail-icon {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+.cocktail-icon:hover {
+    transform: scale(1.2) rotate(20deg);
+}
+
+/* Estilos adicionales para VerCarrito */
+.ver-carrito {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+/* Scrollbar personalizado */
+.ver-carrito::-webkit-scrollbar {
+    width: 8px;
+}
+
+.ver-carrito::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.ver-carrito::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+}
+
+.ver-carrito::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Efectos hover para filas de la tabla */
+.table-hover tbody tr:hover {
+    background-color: rgba(102, 126, 234, 0.05) !important;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+/* Animación para el badge de cantidad */
+.badge {
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Efecto para botones de éxito */
+.btn-success {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+    border: none !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-success::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.7s;
+}
+
+.btn-success:hover::before {
+    left: 100%;
+}
+
+/* Estilos para mejorar el formulario */
+.form-control {
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
+    border-color: #667eea;
+}
+
+/* Efecto para las tarjetas */
+.bg-light.rounded {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.bg-light.rounded:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: #667eea;
+}
+
+/* Animación para el botón */
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.7s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Mapa con efecto */
+iframe {
+    transition: all 0.5s ease;
+    filter: grayscale(20%);
+}
+
+iframe:hover {
+    filter: grayscale(0%);
+    transform: scale(1.01);
+}
+
+/* CSS para mejorar FiltroTipoCocteles y FiltroCategoriaCocteles */
+
+/* Estilos para los dropdown items animados */
+.dropdown-item {
+    transition: all 0.3s ease !important;
+    border-left: 3px solid transparent !important;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+    border-left-color: #007bff !important;
+    padding-left: 1.5rem !important;
+    transform: translateX(5px);
+}
+
+/* Íconos dentro de dropdown items */
+.dropdown-item i {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-item:hover i {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* Animate.css fixes para dropdowns */
+.animate__animated.dropdown-item {
+    animation-duration: 0.5s !important;
+}
+
+.animate__fadeInLeft.dropdown-item,
+.animate__fadeInRight.dropdown-item {
+    animation-fill-mode: both !important;
+}
+
+/* Scrollbar personalizado para dropdowns */
+.dropdown-menu {
+    scrollbar-width: thin !important;
+    scrollbar-color: #007bff #f1f1f1 !important;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+    border-radius: 3px !important;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background: #007bff !important;
+    border-radius: 3px !important;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: #0056b3 !important;
+}
+
+/* Estilos para texto truncado */
+.text-truncate {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    max-width: 180px !important;
+}
+
+/* Colores personalizados para íconos */
+.text-brown {
+    color: #8B4513 !important;
+}
+
+.text-purple {
+    color: #6f42c1 !important;
+}
+
+/* Responsive para móviles */
+@media (max-width: 991.98px) {
+    .dropdown-item {
+        padding: 0.75rem 1.5rem !important;
+        color: rgba(255,255,255,0.8) !important;
+        border-left: none !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    }
+    
+    .dropdown-item:hover {
+        background: rgba(255,255,255,0.1) !important;
+        color: white !important;
+        transform: none !important;
+        padding-left: 2rem !important;
+    }
+    
+    .dropdown-item i {
+        color: inherit !important;
+    }
+    
+    .text-truncate {
+        max-width: 200px !important;
+    }
+}
+
