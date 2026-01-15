@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import CardRecetas from "../components/CardRecetas";
-import Paginador from "../components/Paginador";
-
+import CardRecetas from "../../components/Card/CardRecetas";
+import Paginador from "../../components/Paginador";
 
 const API = 'https://dummyjson.com/recipes?limit=54&skip=';
 

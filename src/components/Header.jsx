@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import FiltroTipoCocteles from './FiltroTipoCocteles';
-import FiltroCategoriaCocteles from './FiltroCategoriaCocteles';
+import FiltroCategoriaCocteles from './Filtro/FiltroCategoriaCocteles';
+import FiltroTipoCocteles from './Filtro/FiltroTipoCocteles';
 import { CarritoContext } from '../context/CarritoContext';
 import VerCarrito from './VerCarrito';
 

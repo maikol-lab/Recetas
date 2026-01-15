@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import CardRecetas from '../components/CardRecetas';
-import CardCocteles from '../components/CardCocteles';
+import CardRecetas from '../components/Card/CardRecetas';
+import CardCocteles from '../components/Card/CardCocteles';
 import Paginador from '../components/Paginador';
 
 const Busquedas = () => {

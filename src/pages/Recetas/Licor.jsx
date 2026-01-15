@@ -1,7 +1,6 @@
-
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CardCocteles from "../components/CardCocteles";
+import CardCocteles from "../../components/Card/CardCocteles";
 
 const API1 = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
 const API2 = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=";
